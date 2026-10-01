@@ -1,21 +1,21 @@
 ---
 title: Webflow
-description: Site structure, CMS modeling, reusable patterns, and delivery notes.
+description: Struktur website, model CMS, pola yang dapat digunakan ulang, dan catatan serah terima.
 sidebar:
-  label: Overview
+  label: Ringkasan
   order: 0
 ---
 
-Site structure, CMS modeling, reusable patterns, and delivery notes.
+Struktur website, model CMS, pola yang dapat digunakan ulang, dan catatan serah terima.
 
 ## Status
 
-**Planned content.** This category is ready for contributions; approved team
-procedures and project records have not been added yet.
+**Direncanakan.** Kategori ini siap menerima kontribusi. Prosedur tim yang
+disetujui dan catatan project belum ditambahkan.
 
-## Contribute
+## Berkontribusi
 
-Start with `templates/guide.md` in the repository root. Document prerequisites,
-steps, expected results, and troubleshooting, then verify the instructions.
+Mulai dari `templates/guide.md` di root repository. Tuliskan prasyarat, langkah kerja, hasil yang diharapkan, dan pemecahan
+masalah, lalu periksa kebenaran instruksinya.
 
-See [Getting Started](/getting-started/) for the contribution workflow.
+Lihat [Mulai di Sini](/getting-started/) untuk alur kontribusi.

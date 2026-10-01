@@ -1,0 +1,23 @@
+---
+import Search from '@astrojs/starlight/components/Search.astro';
+import LanguageSelect from '@astrojs/starlight/components/LanguageSelect.astro';
+import WindowIcon from './WindowIcon.astro';
+
+const { entry, id } = Astro.locals.starlightRoute;
+const location = ['Worldly Behind', ...id.split('/').filter(Boolean)].join(' \\ ');
+---
+
+<div class="win95-titlebar">
+  <WindowIcon />
+  <a class="win95-title-brand" href={import.meta.env.BASE_URL}>Worldly Behind</a>
+  <span class="win95-title-page">— {entry.data.title}</span>
+</div>
+<div class="win95-toolbar">
+  <nav class="win95-toolbar-links" aria-label="Aplikasi">
+    <a href={import.meta.env.BASE_URL}>Dokumentasi</a>
+    <a href={`${import.meta.env.BASE_URL}getting-started/`}>Mulai di Sini</a>
+  </nav>
+  <Search />
+  <LanguageSelect />
+</div>
+<div class="win95-location"><span>Lokasi:</span><span>{location}</span></div>

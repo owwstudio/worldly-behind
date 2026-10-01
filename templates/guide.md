@@ -1,37 +1,37 @@
 ---
-title: "Guide title"
-description: "Describe the task and intended audience."
+title: "Judul panduan"
+description: "Jelaskan tugas dan pembaca yang dituju."
 draft: true
 ---
 
-<!-- Authoring template: replace all placeholders and remove draft: true before publishing. -->
+<!-- Template penulisan: ganti seluruh placeholder dan hapus draft: true sebelum publikasi. -->
 
-## Goal
+## Tujuan
 
-[Describe the concrete result the reader will achieve.]
+[Jelaskan hasil konkret yang akan dicapai pembaca.]
 
-## Prerequisites
+## Prasyarat
 
-- [Required access, tools, versions, and knowledge.]
+- [Akses, tool, versi, dan pengetahuan yang diperlukan.]
 
-## Steps
+## Langkah
 
-### 1. [Action]
+### 1. [Tindakan]
 
-[Explain the action, provide commands or examples, and describe what to expect.]
+[Jelaskan tindakan, berikan perintah atau contoh, dan gambarkan hasil yang diharapkan.]
 
-### 2. [Action]
+### 2. [Tindakan]
 
-[Continue in the order the reader should follow.]
+[Lanjutkan sesuai urutan yang perlu diikuti pembaca.]
 
-## Expected result and verification
+## Hasil yang diharapkan dan pemeriksaan
 
-[Explain how the reader can confirm success.]
+[Jelaskan cara pembaca memastikan keberhasilan.]
 
-## Troubleshooting
+## Pemecahan masalah
 
-- [Symptom, likely cause, and resolution.]
+- [Gejala, kemungkinan penyebab, dan penyelesaian.]
 
-## References
+## Referensi
 
-- [Relevant source link and version or date, where applicable.]
+- [Tautan sumber yang relevan beserta versi atau tanggal bila diperlukan.]

@@ -1,40 +1,46 @@
 ---
-title: Fundamentals
-description: The stack, content boundaries, and writing conventions for Worldly Behind.
+title: Dasar-Dasar
+description: Stack, pemisahan konten dan kode, serta pedoman penulisan Worldly Behind.
 sidebar:
-  label: Overview
+  label: Ringkasan
   order: 0
 ---
 
 ## Stack
 
-Worldly Behind uses Astro and Starlight with strict TypeScript. Starlight supplies
-the sidebar, responsive navigation, search, table of contents, syntax highlighting,
-and previous/next page links. The site builds to static files for Vercel.
+Worldly Behind menggunakan Astro dan Starlight dengan strict TypeScript.
+Starlight menyediakan sidebar, navigasi responsif, pencarian, daftar isi,
+syntax highlighting, dan tautan halaman sebelumnya/selanjutnya.
+Website dibangun menjadi file statis untuk Vercel.
 
-## Content and code
+## Konten dan kode
 
-- Write documentation in Markdown under `src/content/docs/`.
-- Use MDX only when a page requires an interactive component.
-- Keep reusable UI components under `src/components/` and import them into MDX.
-- Keep small vanilla JavaScript interaction modules under `src/scripts/`.
-  JavaScript is type checked; use JSDoc when types need to be explicit.
-- Put custom CSS in `src/styles/custom.css`. The Windows 95 theme is planned;
-  the foundation keeps Starlight's default appearance.
-- Keep authoring templates in the root `templates/` directory so they are not
-  published or indexed by search.
+- Tulis dokumentasi dalam Markdown di `src/content/docs/`.
+- Kumpulkan dokumentasi project dalam subfolder kategori, seperti `pug/verity/`.
+- Gunakan MDX hanya jika halaman memerlukan komponen interaktif.
+- Simpan komponen UI yang dapat digunakan ulang di `src/components/` dan impor ke MDX.
+- Simpan modul interaksi vanilla JavaScript yang kecil di `src/scripts/`.
+  JavaScript ikut diperiksa oleh type-check; gunakan JSDoc jika tipe perlu dinyatakan jelas.
+- Simpan CSS khusus di `src/styles/custom.css`. Komponen tema Windows 95 yang
+  dapat digunakan ulang berada di `src/components/theme/`, terpisah dari konten.
+- Simpan template penulisan di folder `templates/` pada root agar tidak
+  dipublikasikan atau masuk indeks pencarian.
 
-## Writing conventions
+## Pedoman penulisan
 
-Give each page a descriptive title and summary. Use headings to make the page
-easy to scan, include prerequisites before instructions, and describe how to
-verify the result. Distinguish sample content from approved team procedures.
+Gunakan Bahasa Indonesia sebagai bahasa utama. Pertahankan nama tool dan istilah
+teknis dalam Bahasa Inggris jika lebih jelas, seperti prompt, workflow, deployment,
+frontmatter, dan code block. Pertahankan kode serta prompt sumber saat mengimpor dokumen.
 
-Never include credentials, private client details, or unsupported outcome claims.
-Record the source and date when documenting version-specific behavior.
+Berikan judul dan ringkasan yang jelas pada setiap halaman. Gunakan heading agar
+mudah dipindai, tulis prasyarat sebelum langkah kerja, dan jelaskan cara memeriksa
+hasilnya. Bedakan contoh dari prosedur tim yang sudah disetujui.
 
-## Templates
+Jangan sertakan kredensial, informasi privat klien, atau klaim hasil tanpa bukti.
+Catat sumber dan tanggal saat mendokumentasikan perilaku yang bergantung pada versi.
 
-Use `templates/guide.md` for instructions, `templates/prompt.md` for reusable
-prompts, and `templates/case-study.md` for project retrospectives. Replace every
-placeholder and remove the draft flag before publishing.
+## Template
+
+Gunakan `templates/guide.md` untuk panduan, `templates/prompt.md` untuk prompt,
+dan `templates/case-study.md` untuk evaluasi project. Ganti semua placeholder
+dan hapus penanda draft sebelum publikasi.

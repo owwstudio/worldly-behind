@@ -1,21 +1,31 @@
 ---
 title: Pug
-description: Pug templates, includes, mixins, and team conventions.
+description: Dokumentasi Pug dari Verity, termasuk project playbook, template prompt, dan template AGENTS.md.
 sidebar:
-  label: Overview
+  label: Ringkasan
   order: 0
 ---
 
-Pug templates, includes, mixins, and team conventions.
+Dokumentasi Pug, templates, includes, mixins, dan workflow implementasi desain.
 
-## Status
+## Dokumentasi Verity
 
-**Planned content.** This category is ready for contributions; approved team
-procedures and project records have not been added yet.
+Dokumen berikut berasal dari project **Verity**, yang menggunakan MCP Figma
+dan Pug. Stack dan aturan di dalamnya berlaku untuk project Pug yang
+didokumentasikan.
 
-## Contribute
+**Hasil website:** [Lihat website Verity](https://enterprise-protoype-site.vercel.app/).
 
-Start with `templates/guide.md` in the repository root. Document prerequisites,
-steps, expected results, and troubleshooting, then verify the instructions.
+- [Verity: Project Playbook](/pug/verity/project-playbook/) — fondasi project,
+  struktur folder, SCSS, GSAP, Lenis, responsive, asset, dan verifikasi.
+- [Verity: Prompt Templates](/pug/verity/prompt-templates/) — 12 prompt yang
+  dapat disalin untuk kickoff, implementasi section, revisi, QA, dan handoff.
+- [Verity: AGENTS.md Template](/pug/verity/agents-template/) — template aturan
+  pengembangan untuk digunakan pada project Pug baru.
 
-See [Getting Started](/getting-started/) for the contribution workflow.
+## Berkontribusi
+
+Mulai dari `templates/guide.md` di root repository. Tuliskan prasyarat, langkah,
+hasil yang diharapkan, dan pemecahan masalah, lalu periksa instruksinya.
+
+Lihat [Mulai di Sini](/getting-started/) untuk alur kontribusi.

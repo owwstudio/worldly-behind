@@ -1,21 +1,21 @@
 ---
-title: Case Studies
-description: Project context, decisions, outcomes, and lessons learned.
+title: Studi Kasus
+description: Konteks project, keputusan, hasil, dan pelajaran yang diperoleh.
 sidebar:
-  label: Overview
+  label: Ringkasan
   order: 0
 ---
 
-Project context, decisions, outcomes, and lessons learned.
+Konteks project, keputusan, hasil, dan pelajaran yang diperoleh.
 
 ## Status
 
-**Planned content.** This category is ready for contributions; approved team
-procedures and project records have not been added yet.
+**Direncanakan.** Kategori ini siap menerima kontribusi. Prosedur tim yang
+disetujui dan catatan project belum ditambahkan.
 
-## Contribute
+## Berkontribusi
 
-Start with `templates/case-study.md` in the repository root. Include the problem,
-constraints, decisions, evidence, and lessons. Only include approved project details.
+Mulai dari `templates/case-study.md` di root repository. Tuliskan masalah, batasan, keputusan, bukti, dan pelajaran. Sertakan hanya
+informasi project yang telah disetujui untuk dibagikan.
 
-See [Getting Started](/getting-started/) for the contribution workflow.
+Lihat [Mulai di Sini](/getting-started/) untuk alur kontribusi.

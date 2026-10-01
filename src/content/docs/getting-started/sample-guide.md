@@ -1,73 +1,75 @@
 ---
-title: "Sample guide: Add a documentation page"
-description: An example guide demonstrating the team's documentation contribution workflow.
+title: "Contoh panduan: Tambahkan halaman dokumentasi"
+description: Contoh panduan untuk menunjukkan alur kontribusi dokumentasi tim.
 sidebar:
   order: 1
-  badge: Sample
+  badge: Contoh
 ---
 
-> **Sample guide.** This example demonstrates the guide format and uses a temporary
-> page. It is not a record of a completed team project.
+> **Contoh panduan.** Halaman ini menunjukkan format panduan dengan halaman
+> sementara. Contoh ini bukan catatan project tim yang telah selesai.
 
-## Goal
+## Tujuan
 
-Create a Markdown page that appears in the Workflows category and verify that
-the site builds successfully.
+Buat halaman Markdown yang muncul dalam kategori Workflow, lalu pastikan
+website berhasil dibangun.
 
-## Prerequisites
+## Prasyarat
 
-- The repository is installed locally using `npm ci`.
-- You have a working branch for your documentation change.
-- You have chosen a topic and know how to verify its instructions.
+- Repository sudah diinstal secara lokal menggunakan `npm ci`.
+- Branch kerja untuk perubahan dokumentasi sudah tersedia.
+- Topik dan cara memeriksa instruksinya sudah ditentukan.
 
-## Steps
+## Langkah
 
-### 1. Copy the guide template
+### 1. Salin template panduan
 
-From the repository root:
+Jalankan dari root repository:
 
 ```sh
 cp templates/guide.md src/content/docs/workflows/my-first-guide.md
 ```
 
-### 2. Write the page
+### 2. Tulis halaman
 
-Replace the template's title, description, and bracketed placeholders. Describe
-the goal, prerequisites, steps, expected result, and troubleshooting. Remove
-`draft: true` when it is ready to appear on the site.
+Ganti judul, deskripsi, dan placeholder di dalam kurung siku. Tuliskan tujuan,
+prasyarat, langkah, hasil yang diharapkan, serta pemecahan masalah. Hapus
+`draft: true` saat halaman siap ditampilkan.
 
-### 3. Preview the result
+### 3. Tinjau hasil
 
 ```sh
 npm run dev
 ```
 
-Open the address reported by `npm run dev:status`, then navigate to Workflows
-and select your page. Check headings, code blocks, and links.
+Buka alamat dari `npm run dev:status`, masuk ke kategori Workflow, lalu pilih
+halaman baru. Periksa heading, code block, dan tautannya.
 
-### 4. Verify and request review
+### 4. Periksa dan ajukan review
+
+Hentikan dev server dengan `npm run dev:stop` sebelum build.
 
 ```sh
 npm run check
 npm run build
 ```
 
-Open a pull request with the page's purpose and verification results. Stop the
-background server with `npm run dev:stop` when finished.
+Buat pull request dengan tujuan halaman dan hasil pemeriksaan. Hentikan
+background server dengan `npm run dev:stop` saat selesai.
 
-## Expected result
+## Hasil yang diharapkan
 
-The page appears under Workflows and at `/workflows/my-first-guide/`. The checks
-pass, and a production build includes the page in Starlight's search index.
+Halaman muncul di kategori Workflow dan alamat `/workflows/my-first-guide/`.
+Pemeriksaan lulus, dan production build memasukkan halaman ke indeks pencarian Starlight.
 
-## Troubleshooting
+## Pemecahan masalah
 
-- **Page missing:** confirm the file is under `src/content/docs/workflows/`, ends
-  in `.md`, and no longer has `draft: true`.
-- **Build fails:** read the reported file and error; check frontmatter indentation
-  and required `title` before trying again.
+- **Halaman tidak muncul:** pastikan file berada di `src/content/docs/workflows/`,
+  berakhiran `.md`, dan tidak lagi memiliki `draft: true`.
+- **Build gagal:** baca file dan error yang dilaporkan; periksa indentasi
+  frontmatter serta field wajib `title` sebelum mencoba lagi.
 
-## Cleanup
+## Bersihkan contoh
 
-If you followed this guide only to test the workflow, delete
-`src/content/docs/workflows/my-first-guide.md` before opening your pull request.
+Jika panduan ini hanya diikuti untuk mencoba workflow, hapus
+`src/content/docs/workflows/my-first-guide.md` sebelum membuat pull request.

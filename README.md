@@ -1,123 +1,156 @@
 # Worldly Behind
 
-A team documentation website built with Astro 7, Starlight, and strict TypeScript.
-Documentation uses Markdown; MDX is reserved for pages that need interactive
-components. Small vanilla JavaScript modules and custom CSS support future UI work.
+Website dokumentasi tim menggunakan Astro 7, Starlight, dan strict TypeScript.
+Dokumentasi ditulis dalam Markdown; MDX digunakan hanya untuk halaman yang
+memerlukan komponen interaktif. Interaksi memakai modul vanilla JavaScript
+kecil dan custom CSS.
 
-Starlight provides navigation, Pagefind search, a table of contents, syntax
-highlighting, and previous/next links. The Windows 95 theme is planned; this
-foundation keeps the default appearance and registers a custom CSS entry point.
+Bahasa Indonesia menjadi bahasa utama dokumentasi dan antarmuka. Nama tool serta
+istilah teknis yang lebih jelas dalam Bahasa Inggris tetap dipertahankan, seperti
+prompt, workflow, deployment, frontmatter, dan code block. Kode dan prompt sumber
+pada dokumen impor dipertahankan agar tetap dapat disalin dengan benar.
+
+Starlight menyediakan navigasi, pencarian Pagefind, daftar isi, syntax highlighting,
+dan tautan halaman sebelumnya/selanjutnya. Tema Windows 95 menambahkan desktop teal,
+title bar biru, navigasi folder Explorer, panel baca inset, code block Notepad,
+dan taskbar dengan menu Start yang berfungsi. Palet klasik tetap konsisten pada
+pengaturan warna sistem yang berbeda.
 
 ## Setup
 
-Use Node.js **22.12.0 or newer** and npm **9.6.5 or newer**. From the repository root:
+Gunakan Node.js **22.12.0 atau lebih baru** dan npm **9.6.5 atau lebih baru**.
+Jalankan dari root repository:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-The dev server runs in the background, normally at `http://localhost:4321`.
-Check its actual address with `npm run dev:status`. Stop it when finished with
-`npm run dev:stop`.
+Dev server berjalan di background, biasanya pada `http://localhost:4321`.
+Periksa alamat aktual dengan `npm run dev:status`. Hentikan dengan
+`npm run dev:stop` saat selesai.
 
-## Available commands
+## Perintah yang tersedia
 
-| Command | Purpose |
+| Perintah | Fungsi |
 | --- | --- |
-| `npm ci` | Install the locked dependency versions |
-| `npm run dev` | Start `astro dev --background` |
-| `npm start` | Alias for the background dev server |
-| `npm run dev:status` | Show the background server's status and address |
-| `npm run dev:logs` | Read background server logs |
-| `npm run dev:stop` | Stop the background server |
-| `npm run check` | Run Astro diagnostics and type checking, including JavaScript |
-| `npm run build` | Build static pages and the Pagefind index into `dist/` |
-| `npm run preview` | Serve the production build locally; stop with Ctrl+C |
-| `npm run astro -- <command>` | Run an Astro CLI command, such as `sync` or `--help` |
+| `npm ci` | Menginstal versi dependency dari lockfile |
+| `npm run dev` | Menjalankan ulang background dev server setelah membersihkan cache konten |
+| `npm start` | Alias untuk background dev server |
+| `npm run dev:status` | Menampilkan status dan alamat background server |
+| `npm run dev:logs` | Membaca log background server |
+| `npm run dev:stop` | Menghentikan background server |
+| `npm run check` | Menjalankan diagnostik Astro dan type-check, termasuk JavaScript |
+| `npm run build` | Membangun ulang halaman statis dan indeks Pagefind ke `dist/` |
+| `npm run preview` | Menjalankan production build secara lokal; hentikan dengan Ctrl+C |
+| `npm run astro -- <command>` | Menjalankan Astro CLI, misalnya `sync` atau `--help` |
 
-Search uses the production Pagefind index. Run `npm run build` followed by
-`npm run preview` to verify real search results; the dev server uses a placeholder.
+Pencarian menggunakan indeks Pagefind dari production build. Jalankan
+`npm run build`, lalu `npm run preview` untuk memeriksa hasil pencarian;
+dev server hanya menampilkan placeholder.
 
-## Project structure
+Hentikan background dev server sebelum build dan jalankan kembali setelahnya.
+Build menggunakan `astro build --force` agar cache Markdown/MDX lama tidak merujuk
+stylesheet atau script Expressive Code yang sudah berubah.
+
+Startup dev menjalankan `astro dev stop`, `astro sync --force`, lalu
+`astro dev --background`. Cache dibersihkan sebelum startup karena launcher
+background tidak meneruskan flag `--force` ke child server. Vite juga melakukan
+optimasi ulang dependency agar virtual module tidak memakai konfigurasi tema lama.
+
+Build dilanjutkan dengan Pagefind CLI untuk memastikan manifest pencarian lengkap.
+Pada lingkungan ini, proses indexing API Starlight pernah menghasilkan
+`pagefind-entry.json` kosong. Pagefind tetap menjadi mesin pencarian Starlight.
+
+## Struktur project
 
 ```text
-templates/                 Authoring templates, never published
-public/                    Static assets
+templates/                 Template penulisan, tidak dipublikasikan
+public/                    Asset statis
 src/
-  assets/                  Build-processed images and assets
-  components/              Reusable UI components (reserved)
-  content/docs/            Published Markdown and interactive MDX pages
-  content.config.ts        Starlight docs loader and frontmatter schema
-  scripts/                 Small vanilla JavaScript modules (reserved)
-  styles/custom.css        Future Windows 95 theme entry point
-astro.config.mjs           Static output, site identity, and sidebar configuration
-tsconfig.json              Strict TypeScript and checked JavaScript
-AGENTS.md                  Development rules for contributors and coding agents
+  assets/                  Gambar dan asset yang diproses build
+  components/theme/        Override Starlight dan komponen taskbar
+  content/docs/            Halaman Markdown dan MDX yang dipublikasikan
+  content/i18n/id.json      Terjemahan antarmuka Bahasa Indonesia
+  content.config.ts        Loader dokumentasi, frontmatter, dan terjemahan
+  scripts/                 Navigasi vanilla JavaScript dan aksesibilitas code panel
+  styles/custom.css        Token Windows 95, layout, dan gaya UI
+astro.config.mjs           Output statis, bahasa utama, sidebar, dan redirect
+tsconfig.json              Strict TypeScript dan JavaScript yang diperiksa
+AGENTS.md                  Aturan pengembangan bagi kontributor dan coding agent
 ```
 
-## Documentation categories
+## Kategori dokumentasi
 
-| Category | Content directory |
+| Kategori | Folder konten |
 | --- | --- |
-| Getting Started | `src/content/docs/getting-started/` |
-| Fundamentals | `src/content/docs/fundamentals/` |
+| Mulai di Sini | `src/content/docs/getting-started/` |
+| Dasar-Dasar | `src/content/docs/fundamentals/` |
 | Webflow | `src/content/docs/webflow/` |
 | Framer | `src/content/docs/framer/` |
 | Shopify | `src/content/docs/shopify/` |
 | Pug | `src/content/docs/pug/` |
 | MCP | `src/content/docs/mcp/` |
-| Prompts | `src/content/docs/prompts/` |
-| Workflows | `src/content/docs/workflows/` |
-| Case Studies | `src/content/docs/case-studies/` |
+| Prompt | `src/content/docs/prompts/` |
+| Workflow | `src/content/docs/workflows/` |
+| Studi Kasus | `src/content/docs/case-studies/` |
 
-Each category has an overview. Categories awaiting real documentation are labelled
-as planned content. The sample guide and sample prompt are clearly labelled in
-their titles, page text, and sidebar badges.
+Setiap kategori memiliki halaman ringkasan. Dokumentasi project dikumpulkan
+dalam subfolder, seperti `src/content/docs/pug/verity/`. Kategori yang belum terisi
+ditandai sebagai konten yang direncanakan. Panduan dan prompt contoh diberi
+penanda **Contoh** pada judul, isi halaman, dan badge sidebar.
 
-## Contribution workflow
+## Alur kontribusi
 
-1. Read `AGENTS.md`, create a branch, and install dependencies with `npm ci`.
-2. Choose a category and copy `templates/guide.md`, `templates/prompt.md`, or
-   `templates/case-study.md` to a descriptive, kebab-case `.md` filename in it.
-3. Replace every placeholder, set `title` and `description` in frontmatter, and
-   remove `draft: true` when the page is ready to publish. Drafts remain unpublished
-   and excluded from search in production.
-4. Use headings for the table of contents. Set `sidebar.order` if a specific
-   reading sequence is needed; the category sidebar includes pages automatically.
-5. Keep content in the docs collection and UI code in the dedicated component and
-   script directories. Use `.mdx` only when an interactive component is needed.
-6. Preview the rendered page and check links, instructions, and sample labels.
-7. Run `npm run check` and `npm run build`. For search checks, use the production
-   preview. Stop any background dev server when finished.
-8. Open a pull request explaining the change and verification results. Include
-   screenshots for visual changes and commit `package-lock.json` with dependency
-   updates. Do not commit generated output or confidential information.
+1. Baca `AGENTS.md`, buat branch kerja, dan instal dependency dengan `npm ci`.
+2. Pilih kategori dan subfolder project bila diperlukan. Salin
+   `templates/guide.md`, `templates/prompt.md`, atau `templates/case-study.md`
+   ke file `.md` dengan nama kebab-case yang menjelaskan isinya.
+3. Ganti seluruh placeholder, atur `title` dan `description` di frontmatter,
+   lalu hapus `draft: true` saat halaman siap dipublikasikan. Draft tidak
+   dipublikasikan dan tidak masuk indeks pencarian produksi.
+4. Gunakan heading untuk daftar isi. Atur `sidebar.order` bila urutan baca perlu
+   ditentukan; sidebar otomatis memasukkan halaman dari folder kategori.
+5. Simpan konten dalam koleksi dokumentasi dan kode UI dalam folder komponen
+   serta script. Gunakan `.mdx` hanya bila memerlukan komponen interaktif.
+6. Tinjau halaman dan periksa tautan, instruksi, serta penanda contoh.
+7. Hentikan dev server, lalu jalankan `npm run check` dan `npm run build`.
+   Gunakan production preview untuk memeriksa pencarian. Jalankan kembali dev
+   server jika ingin melanjutkan pekerjaan.
+8. Buat pull request yang menjelaskan perubahan dan hasil pemeriksaan. Sertakan
+   screenshot untuk perubahan visual, dan commit `package-lock.json` bersama
+   perubahan dependency. Jangan commit output build atau informasi rahasia.
 
-Examples: `src/content/docs/getting-started/sample-guide.md` and
-`src/content/docs/prompts/sample-prompt.md`. Templates live outside
-`src/content/docs/` so placeholders never become documentation routes.
+Contoh tersedia di `src/content/docs/getting-started/sample-guide.md` dan
+`src/content/docs/prompts/sample-prompt.md`. Template disimpan di luar
+`src/content/docs/` agar placeholder tidak menjadi halaman publik.
 
-## Static deployment to Vercel
+## Deployment statis ke Vercel
 
-Import the repository into Vercel and use these project settings:
+Impor repository ke Vercel dengan pengaturan berikut:
 
-| Setting | Value |
+| Pengaturan | Nilai |
 | --- | --- |
 | Framework preset | Astro |
 | Install command | `npm ci` |
 | Build command | `npm run check && npm run build` |
 | Output directory | `dist` |
 
-Select a supported Node.js version that meets the requirement above. The project
-explicitly uses `output: 'static'`; no Vercel adapter or runtime environment
-variables are needed. Deployment is not performed as part of local setup.
+Pilih versi Node.js yang memenuhi kebutuhan di atas. Project menggunakan
+`output: 'static'`; adapter Vercel dan environment variable runtime tidak diperlukan.
+Setup lokal tidak melakukan deployment.
 
-When the production domain is known, set Astro's `site` option to its canonical
-URL before configuring canonical URLs or a sitemap.
+Saat domain produksi sudah diketahui, atur opsi `site` Astro ke URL resmi sebelum
+mengonfigurasi canonical URL atau sitemap.
 
-## Reference documentation
+## Referensi dan perilaku tema
 
-- [Astro documentation](https://docs.astro.build/)
-- [Starlight documentation](https://starlight.astro.build/)
-- [Astro on Vercel](https://docs.astro.build/en/guides/deploy/vercel/)
+Tema menggunakan override Starlight yang terdokumentasi dan token CSS bersama.
+Menu Start mendukung klik, Enter/Space, tombol panah, Home/End, Escape, dan penutupan
+saat klik di luar menu. Navigasi mobile mempertahankan sidebar collapsible Starlight.
+Tombol Salin memakai handler dan feedback Expressive Code. Jendela draggable dan
+beberapa jendela sekaligus belum diimplementasikan.
+
+- [Dokumentasi Astro](https://docs.astro.build/)
+- [Dokumentasi Starlight](https://starlight.astro.build/)
+- [Astro di Vercel](https://docs.astro.build/en/guides/deploy/vercel/)

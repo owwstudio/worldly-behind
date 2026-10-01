@@ -1,41 +1,41 @@
 ---
-title: "Prompt title"
-description: "Describe the prompt's purpose and when to use it."
+title: "Judul prompt"
+description: "Jelaskan tujuan prompt dan kapan digunakan."
 draft: true
 ---
 
-<!-- Authoring template: replace all placeholders and remove draft: true before publishing. -->
+<!-- Template penulisan: ganti seluruh placeholder dan hapus draft: true sebelum publikasi. -->
 
-## Purpose
+## Tujuan
 
-[Describe the task and when this prompt is useful.]
+[Jelaskan tugas dan kapan prompt ini berguna.]
 
-## Inputs
+## Input
 
-- [Variable name, meaning, and any constraints.]
+- [Nama variabel, arti, dan batasannya.]
 
 ## Prompt
 
 ```text
-[Write the reusable prompt with clearly named input placeholders.]
-[Specify the output format, constraints, and handling of missing information.]
+[Tulis prompt yang dapat digunakan ulang dengan placeholder input yang jelas.]
+[Tentukan format output, batasan, dan penanganan informasi yang belum tersedia.]
 ```
 
-## Example input
+## Contoh input
 
 ```text
-[Provide realistic input with sensitive information removed.]
+[Berikan input yang realistis dengan informasi sensitif dihapus.]
 ```
 
-## Expected output
+## Output yang diharapkan
 
-[Describe or show the expected format. Label illustrative output as an example.]
+[Jelaskan atau tunjukkan format yang diharapkan. Tandai output ilustrasi sebagai contoh.]
 
-## Evaluation
+## Evaluasi
 
-- [Criterion a reviewer can use to judge correctness and usefulness.]
-- [Record model, version, date, and observed results if tested.]
+- [Kriteria untuk menilai kebenaran dan kegunaan.]
+- [Catat model, versi, tanggal, dan hasil yang diamati jika sudah diuji.]
 
-## Limitations
+## Batasan
 
-[Known failure cases, assumptions, and required human review.]
+[Kemungkinan kegagalan yang diketahui, asumsi, dan review manusia yang diperlukan.]

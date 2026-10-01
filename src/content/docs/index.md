@@ -1,33 +1,35 @@
 ---
 title: Worldly Behind
-description: A shared home for team knowledge, practical guides, prompts, and lessons learned.
+description: Tempat berbagi pengetahuan tim, panduan praktis, prompt, dan pelajaran dari project.
 ---
 
-Worldly Behind is our team documentation website. Use it to share repeatable work,
-explain decisions, and record what we learn.
+Worldly Behind adalah website dokumentasi tim. Gunakan untuk berbagi proses
+kerja yang dapat diulang, menjelaskan keputusan, dan mencatat pelajaran dari project.
 
-## Start here
+## Mulai di sini
 
-- [Getting Started](/getting-started/) — set up the project and contribute a page.
-- [Fundamentals](/fundamentals/) — understand the stack and writing conventions.
-- [Sample guide](/getting-started/sample-guide/) — see a complete guide example.
-- [Sample prompt](/prompts/sample-prompt/) — see a reusable prompt example.
+- [Mulai di Sini](/getting-started/) — jalankan project dan tambahkan dokumentasi.
+- [Dasar-Dasar](/fundamentals/) — pahami stack dan pedoman penulisan.
+- [Contoh panduan](/getting-started/sample-guide/) — lihat contoh panduan lengkap.
+- [Contoh prompt](/prompts/sample-prompt/) — lihat contoh prompt yang dapat digunakan ulang.
 
-## Explore the documentation
+## Jelajahi dokumentasi
 
-| Category | What belongs here |
+| Kategori | Isi dokumentasi |
 | --- | --- |
-| [Webflow](/webflow/) | Site structure, CMS, and delivery notes |
-| [Framer](/framer/) | Site building, components, and publishing notes |
-| [Shopify](/shopify/) | Storefronts, themes, and store operations |
-| [Pug](/pug/) | Templates, includes, mixins, and conventions |
-| [MCP](/mcp/) | Model Context Protocol tools and integrations |
-| [Prompts](/prompts/) | Reusable prompts with inputs and evaluation criteria |
-| [Workflows](/workflows/) | Repeatable team processes and handoffs |
-| [Case Studies](/case-studies/) | Project context, decisions, outcomes, and lessons |
+| [Webflow](/webflow/) | Struktur website, CMS, dan catatan serah terima |
+| [Framer](/framer/) | Pembuatan website, komponen, dan publikasi |
+| [Shopify](/shopify/) | Storefront, tema, dan operasional toko |
+| [Pug](/pug/) | Template, includes, mixins, dan pedoman penggunaan |
+| [MCP](/mcp/) | Tool dan integrasi Model Context Protocol |
+| [Prompt](/prompts/) | Prompt dengan input dan kriteria evaluasi yang jelas |
+| [Workflow](/workflows/) | Proses kerja tim dan handoff yang dapat diulang |
+| [Studi Kasus](/case-studies/) | Konteks project, keputusan, hasil, dan pelajaran |
 
-## Foundation status
+## Status dokumentasi
 
-The category structure is ready for contributions. The sample guide and prompt
-are labelled examples; category placeholders are labelled as planned content.
-The Windows 95 visual theme will be added in a later phase.
+Struktur kategori siap menerima kontribusi. Panduan dan prompt contoh ditandai
+sebagai **Contoh**; kategori yang belum terisi ditandai sebagai konten yang
+**Direncanakan**. Dokumentasi Verity tersedia di kategori Pug.
+Tema Windows 95 menyediakan navigasi folder, jendela baca, dan code block
+bergaya Notepad dengan tombol Salin.

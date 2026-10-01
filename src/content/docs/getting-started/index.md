@@ -1,46 +1,52 @@
 ---
-title: Getting Started
-description: Set up Worldly Behind locally and contribute your first documentation page.
+title: Mulai di Sini
+description: Jalankan Worldly Behind secara lokal dan tambahkan halaman dokumentasi pertama.
 sidebar:
-  label: Overview
+  label: Ringkasan
   order: 0
 ---
 
-## Local setup
+## Setup lokal
 
-Use Node.js 22.12.0 or newer and npm 9.6.5 or newer. From the project root:
+Gunakan Node.js 22.12.0 atau lebih baru dan npm 9.6.5 atau lebih baru.
+Jalankan dari root project:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-The development server starts in the background, normally at
-`http://localhost:4321`. Use `npm run dev:status` to find its address,
-`npm run dev:logs` to inspect logs, and `npm run dev:stop` to stop it.
+Dev server berjalan di background, biasanya pada `http://localhost:4321`.
+Gunakan `npm run dev:status` untuk melihat alamatnya, `npm run dev:logs` untuk
+membaca log, dan `npm run dev:stop` untuk menghentikannya.
 
-## Add documentation
+## Tambahkan dokumentasi
 
-1. Choose the category that best fits the topic.
-2. Copy a Markdown file from the root `templates/` directory into
-   `src/content/docs/<category>/<descriptive-name>.md`.
-3. Replace all placeholders, write a useful description, and remove `draft: true`
-   when the page is ready to publish.
-4. Preview the page, check its links, and run the verification commands below.
-5. Open a pull request describing the change and how you verified it.
+1. Pilih kategori yang sesuai dengan topik.
+2. Salin file Markdown dari folder `templates/` di root ke
+   `src/content/docs/<kategori>/<nama-halaman>.md`. Untuk dokumentasi project,
+   kumpulkan halaman dalam subfolder project, seperti `pug/verity/`.
+3. Ganti semua placeholder, tulis deskripsi yang jelas, dan hapus `draft: true`
+   saat halaman siap dipublikasikan.
+4. Tinjau halaman beserta tautannya, lalu jalankan pemeriksaan di bawah.
+5. Buat pull request yang menjelaskan perubahan dan hasil pemeriksaan.
 
-The sidebar automatically includes published pages in each category. Set
-`sidebar.order` in frontmatter when the reading sequence matters.
+Sidebar otomatis menampilkan halaman yang dipublikasikan pada setiap kategori.
+Atur `sidebar.order` di frontmatter jika urutan baca perlu ditentukan.
 
-## Verify changes
+## Periksa perubahan
+
+Hentikan dev server dengan `npm run dev:stop` sebelum menjalankan build agar
+kedua proses tidak menulis cache yang sama secara bersamaan.
 
 ```sh
 npm run check
 npm run build
 ```
 
-Type checking checks project code. The build validates documentation frontmatter
-and produces the static site and search index in `dist/`.
+Type-check memeriksa kode project. Build memvalidasi frontmatter dokumentasi
+serta menghasilkan website statis dan indeks pencarian dalam `dist/`.
+Jalankan kembali `npm run dev` jika ingin melanjutkan preview di dev server.
 
-See the [sample guide](/getting-started/sample-guide/) for a worked example and
-[Fundamentals](/fundamentals/) for project conventions.
+Lihat [contoh panduan](/getting-started/sample-guide/) untuk langkah lengkap dan
+[Dasar-Dasar](/fundamentals/) untuk pedoman project.

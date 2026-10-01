@@ -1,0 +1,13 @@
+---
+import Default from '@astrojs/starlight/components/PageFrame.astro';
+import Taskbar from './Taskbar.astro';
+---
+
+<div class="win95-desktop">
+  <Default>
+    <slot name="header" slot="header" />
+    <slot name="sidebar" slot="sidebar" />
+    <slot />
+  </Default>
+  <Taskbar />
+</div>

@@ -1,23 +1,22 @@
 ---
-title: Prompts
-description: Reusable prompts with clear inputs, outputs, and evaluation criteria.
+title: Prompt
+description: Prompt yang dapat digunakan ulang dengan input, output, dan kriteria evaluasi yang jelas.
 sidebar:
-  label: Overview
+  label: Ringkasan
   order: 0
 ---
 
-Reusable prompts with clear inputs, outputs, and evaluation criteria.
+Prompt yang dapat digunakan ulang dengan input, output, dan kriteria evaluasi yang jelas.
 
 ## Status
 
-**Planned content.** This category is ready for contributions; approved team
-procedures and project records have not been added yet.
+**Direncanakan.** Kategori ini siap menerima kontribusi. Prosedur tim yang
+disetujui dan catatan project belum ditambahkan.
 
-## Contribute
+## Berkontribusi
 
-Start with `templates/prompt.md` in the repository root. Include input variables,
-expected output, evaluation criteria, and known limitations.
+Mulai dari `templates/prompt.md` di root repository. Tuliskan variabel input,
+output yang diharapkan, kriteria evaluasi, dan batasan yang diketahui.
 
-See the [clearly labelled sample prompt](/prompts/sample-prompt/) for an example.
-
-See [Getting Started](/getting-started/) for the contribution workflow.
+Lihat [contoh prompt](/prompts/sample-prompt/) sebagai referensi dan
+[Mulai di Sini](/getting-started/) untuk alur kontribusi.

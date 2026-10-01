@@ -1,5 +1,325 @@
-/*
- * Worldly Behind custom CSS entry point, loaded by Starlight.
- * The Windows 95 theme is deferred. Add its tokens and styles here when ready.
- * Preserve readable contrast, visible focus, responsive layouts, and Starlight UI.
- */
+/* Shared classic palette. Both system color preferences use the same readable theme. */
+:root, :root[data-theme='light'], :root[data-theme='dark'] {
+  color-scheme: light;
+  --win95-desktop: #008080;
+  --win95-surface: #c0c0c0;
+  --win95-title: #000080;
+  --win95-paper: #ffffff;
+  --win95-ink: #111111;
+  --win95-muted: #404040;
+  --win95-inactive-title: #606060;
+  --win95-light: #ffffff;
+  --win95-shadow: #808080;
+  --win95-dark: #000000;
+  --win95-folder: #ffff80;
+  --win95-raised: inset 1px 1px var(--win95-light), inset -1px -1px var(--win95-dark), inset 2px 2px #dfdfdf, inset -2px -2px var(--win95-shadow);
+  --win95-inset: inset 1px 1px var(--win95-shadow), inset -1px -1px var(--win95-light), inset 2px 2px var(--win95-dark), inset -2px -2px #dfdfdf;
+  --win95-font: Tahoma, Arial, sans-serif;
+  --win95-mono: 'Courier New', monospace;
+  --win95-taskbar-height: 2.75rem;
+  --win95-desktop-gap: .75rem;
+  --sl-font: var(--win95-font);
+  --sl-font-mono: var(--win95-mono);
+  --sl-color-white: #111111;
+  --sl-color-black: #ffffff;
+  --sl-color-gray-1: #111111;
+  --sl-color-gray-2: #252525;
+  --sl-color-gray-3: var(--win95-muted);
+  --sl-color-gray-4: #808080;
+  --sl-color-gray-5: #c0c0c0;
+  --sl-color-gray-6: #ededed;
+  --sl-color-gray-7: #ffffff;
+  --sl-color-accent: #000080;
+  --sl-color-accent-high: #000080;
+  --sl-color-accent-low: #eeeeff;
+  --sl-color-text: var(--win95-ink);
+  --sl-color-text-accent: var(--win95-title);
+  --sl-color-text-invert: #ffffff;
+  --sl-color-bg: var(--win95-desktop);
+  --sl-color-bg-nav: var(--win95-surface);
+  --sl-color-bg-sidebar: var(--win95-surface);
+  --sl-color-bg-inline-code: #eeeeee;
+  --sl-color-bg-accent: var(--win95-title);
+  --sl-color-hairline: #808080;
+  --sl-color-hairline-light: #c0c0c0;
+  --sl-color-hairline-shade: #808080;
+  --sl-color-blue-low: #eeeeff;
+  --sl-color-blue-high: #000080;
+  --sl-color-purple-low: #f5eef9;
+  --sl-color-purple-high: #552266;
+  --sl-color-orange-low: #fff7df;
+  --sl-color-orange-high: #614300;
+  --sl-color-red-low: #fff0ee;
+  --sl-color-red-high: #800000;
+  --sl-shadow-sm: var(--win95-raised);
+  --sl-shadow-md: var(--win95-raised);
+  --sl-shadow-lg: var(--win95-raised);
+  --sl-nav-height: 6.5rem;
+  --sl-sidebar-width: 16rem;
+  --sl-content-width: 46rem;
+  --sl-text-h1: 1.75rem;
+  --sl-text-h2: 1.375rem;
+  --sl-text-h3: 1.125rem;
+  --sl-text-h4: 1rem;
+  --sl-line-height: 1.65;
+}
+
+html { scroll-padding-top: calc(var(--sl-nav-height) + 4rem); }
+body { background: var(--win95-desktop); font-family: var(--win95-font); }
+*, *::before, *::after { border-radius: 0; }
+::selection { background: var(--win95-title); color: white; }
+:where(a, button, summary, input, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--win95-title);
+  outline-offset: 3px;
+}
+button, input, select { font-family: var(--win95-font); }
+button { cursor: pointer; }
+.win95-button, button[data-open-modal], button[data-close-modal], .sl-menu-button,
+.pagination-links a, .pagefind-ui__button, mobile-starlight-toc .toggle {
+  border: 0;
+  border-radius: 0;
+  background: var(--win95-surface);
+  color: var(--win95-ink);
+  box-shadow: var(--win95-raised);
+  padding: .4rem .7rem;
+  min-height: 2rem;
+  font-size: .8125rem;
+  text-decoration: none;
+}
+.win95-button:active, button[data-open-modal]:active, button[data-close-modal]:active,
+.sl-menu-button:active, .pagination-links a:active, .pagefind-ui__button:active,
+.win95-start-button[aria-expanded='true'] {
+  box-shadow: var(--win95-inset);
+  background: #b8b8b8;
+}
+.win95-desktop > .page { min-height: calc(100vh - var(--win95-taskbar-height)); }
+.win95-desktop .page > .header {
+  inset: var(--win95-desktop-gap) var(--win95-desktop-gap) auto;
+  width: auto;
+  height: var(--sl-nav-height);
+  padding: 3px;
+  border: 0;
+  background: var(--win95-surface);
+  box-shadow: var(--win95-raised);
+}
+[data-has-sidebar] .win95-desktop .page > .header { padding-inline-end: 3px; }
+.win95-titlebar {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  height: 1.75rem;
+  padding: .2rem .4rem;
+  color: white;
+  background: var(--win95-title);
+  font-size: .8125rem;
+  line-height: 1.2;
+  font-weight: bold;
+  overflow: hidden;
+}
+.win95-titlebar svg { flex-shrink: 0; }
+.win95-title-brand { color: white; text-decoration: none; white-space: nowrap; }
+.win95-title-brand:focus-visible { outline-color: white; }
+.win95-title-page { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.win95-toolbar {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  height: 2.5rem;
+  padding: .2rem .5rem;
+  border-bottom: 1px solid var(--win95-shadow);
+}
+.win95-toolbar-links { display: flex; gap: 1rem; margin-right: auto; font-size: .8125rem; }
+.win95-toolbar-links a { color: var(--win95-ink); text-decoration: none; }
+.win95-toolbar-links a:hover { text-decoration: underline; }
+.win95-toolbar button[data-open-modal] { width: auto; height: 1.875rem; min-height: 1.875rem; gap: .5rem; }
+.win95-toolbar button[data-open-modal] svg { width: 1rem; height: 1rem; }
+.win95-toolbar kbd { border-radius: 0; background: transparent; }
+.win95-location { display: flex; gap: .5rem; align-items: center; padding: .2rem .5rem; font-size: .75rem; }
+.win95-location > :last-child {
+  flex: 1; padding: .2rem .4rem; min-width: 0; background: white;
+  box-shadow: var(--win95-inset); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.win95-desktop .main-frame {
+  min-width: 0;
+  padding-top: calc(var(--sl-nav-height) + var(--win95-desktop-gap) + var(--sl-mobile-toc-height) + .75rem);
+  padding-right: calc(var(--win95-desktop-gap) + .5rem);
+  padding-left: calc(var(--sl-content-inline-start, 0px) + var(--win95-desktop-gap) + .5rem);
+  padding-bottom: calc(var(--win95-taskbar-height) + 1.5rem);
+}
+.win95-desktop .main-pane {
+  min-width: 0;
+  background: var(--win95-paper);
+  box-shadow: var(--win95-inset);
+  border: 3px solid var(--win95-surface);
+  padding-bottom: 1rem;
+}
+.win95-desktop .content-panel { border: 0; padding: 1.5rem clamp(1rem, 3vw, 2.5rem); }
+.win95-desktop .content-panel + .content-panel { padding-top: 0; }
+.win95-desktop .sl-container { margin-inline: auto; min-width: 0; }
+h1 { line-height: 1.3; }
+.sl-markdown-content { overflow-wrap: anywhere; }
+worldly-code-panels { display: block; min-width: 0; }
+.sl-markdown-content :is(h2, h3, h4) { line-height: 1.4; }
+.sl-markdown-content a { text-underline-offset: .16em; }
+.sl-markdown-content :not(pre) > code { border: 1px solid #d0d0d0; padding: .1rem .25rem; font-size: .875em; }
+.sl-markdown-content blockquote, .starlight-aside {
+  border: 0; border-left: 4px solid var(--win95-title); border-radius: 0;
+  box-shadow: var(--win95-raised); background: #f0f0f0; color: var(--win95-ink);
+  padding: 1rem 1.25rem;
+}
+.starlight-aside--tip { background: #f5eef9; border-left-color: #552266; }
+.starlight-aside--caution { background: #fff7df; border-left-color: #614300; }
+.starlight-aside--danger { background: #fff0ee; border-left-color: #800000; }
+.sl-markdown-content table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-size: .875rem; }
+.sl-markdown-content :is(th, td) { border: 1px solid var(--win95-shadow); padding: .65rem .8rem; }
+.sl-markdown-content th { background: var(--win95-surface); color: var(--win95-ink); font-weight: bold; }
+.sl-markdown-content tr:nth-child(even) { background: #f4f4f4; }
+.sl-badge { border-radius: 0; color: var(--win95-title); background: #eeeeff; border: 1px solid #808080; }
+.pagination-links a { box-shadow: var(--win95-raised); padding: .8rem 1rem; font-size: .875rem; }
+.pagination-links a:hover { background: #d0d0d0; color: var(--win95-ink); }
+
+/* Keep Starlight's tree, persister and native mobile popover. */
+.win95-desktop .sidebar-pane {
+  inset-block: calc(var(--sl-nav-height) + var(--win95-desktop-gap) + .75rem) calc(var(--win95-taskbar-height) + .75rem);
+  inset-inline-start: var(--win95-desktop-gap);
+  margin: 0;
+  background: var(--win95-surface);
+  border: 0;
+  width: calc(100% - 2 * var(--win95-desktop-gap));
+  box-shadow: var(--win95-raised);
+  scrollbar-gutter: auto;
+}
+.win95-desktop .sidebar-content { padding: .35rem; gap: 0; }
+.win95-explorer { display: flex; flex-direction: column; min-height: 100%; }
+.win95-pane-caption { background: var(--win95-inactive-title); color: white; font-size: .8125rem; font-weight: bold; padding: .35rem .5rem; }
+.win95-folder-tree { background: white; box-shadow: var(--win95-inset); padding: .75rem .35rem; margin-top: .35rem; flex: 1; }
+.win95-folder-tree .top-level > li + li { margin-top: .3rem; }
+.win95-folder-tree summary { justify-content: flex-start; gap: .4rem; padding: .25rem; }
+.win95-folder-tree summary .caret { order: -1; width: .9rem; height: .9rem; border: 1px solid #808080; transition: none; }
+.win95-folder-tree .group-label { display: flex; align-items: center; gap: .4rem; }
+.win95-folder-tree .large { font-size: .8125rem; font-weight: normal; color: var(--win95-ink); }
+.win95-folder-icon, .win95-folder-tree .group-label::before {
+  content: ''; display: inline-block; width: 1rem; height: .75rem;
+  flex-shrink: 0; background: var(--win95-folder); border: 1px solid #806000;
+  box-shadow: -2px -3px 0 -1px #c0a040;
+}
+.win95-folder-tree a { font-size: .8125rem; border-radius: 0; padding: .3rem .4rem; }
+.win95-folder-tree a:hover { background: #eeeeff; color: var(--win95-title); }
+.win95-folder-tree a[aria-current='page'] { background: var(--win95-title); color: white; font-weight: normal; }
+.win95-folder-tree ul ul li { border-left: 1px dotted #808080; }
+.win95-folder-tree a[aria-current='page'] .sl-badge { color: white; background: transparent; border-color: white; }
+.win95-explorer-status { font-size: .75rem; padding: .5rem; color: #505050; }
+.win95-desktop .right-sidebar { background: var(--win95-surface); border: 0; box-shadow: var(--win95-raised); }
+.win95-desktop .right-sidebar h2 { font-size: .8125rem; }
+.win95-desktop .right-sidebar a { font-size: .8125rem; min-width: 0; overflow-wrap: anywhere; }
+.win95-desktop .right-sidebar .content-panel { padding: .75rem; }
+.win95-desktop .right-sidebar .sl-container { width: 100%; max-width: 100%; }
+.win95-desktop .right-sidebar li { min-width: 0; }
+.win95-desktop .right-sidebar a[aria-current='true'] { background: var(--win95-title); color: white; }
+mobile-starlight-toc nav { top: calc(var(--sl-nav-height) + var(--win95-desktop-gap)); background: var(--win95-surface); }
+mobile-starlight-toc .toggle { padding: .4rem .65rem; }
+mobile-starlight-toc .dropdown { background: white; border-color: #808080; }
+
+/* Expressive Code keeps its original copy handler, accessible label and feedback. */
+.expressive-code { min-width: 0; max-width: 100%; }
+.expressive-code .frame { border-radius: 0; background: var(--win95-surface); box-shadow: var(--win95-raised); padding: 3px; }
+.expressive-code .frame::before {
+  content: 'Notepad'; display: block; padding: .3rem .5rem; padding-right: 5rem;
+  background: var(--win95-title); color: white; font: bold .8125rem/1.4 var(--win95-font);
+}
+.expressive-code .frame .header { display: none; }
+.expressive-code pre { border: 0; border-radius: 0; box-shadow: var(--win95-inset); background: white; margin-top: 3px; }
+.expressive-code pre > code { padding-block: 1rem; }
+.expressive-code pre::-webkit-scrollbar-thumb { border-radius: 0; }
+.expressive-code .copy { inset: .3rem .4rem auto auto; width: auto; height: auto; padding: 0; }
+.expressive-code .copy button {
+  opacity: 1; width: 3.75rem; height: 1.5rem; border: 0; border-radius: 0;
+  background: var(--win95-surface); box-shadow: var(--win95-raised); color: var(--win95-ink);
+}
+.expressive-code .copy button::before { content: 'Salin'; position: static; border: 0; font: .75rem var(--win95-font); background: none; opacity: 1; }
+.expressive-code .copy button > div { display: none; }
+.expressive-code .copy button::after { display: none; }
+.expressive-code .copy button:active { box-shadow: var(--win95-inset); }
+.expressive-code .copy button:focus-visible { outline: 2px solid white; outline-offset: 1px; }
+.expressive-code .copy .feedback { border-radius: 0; background: var(--win95-title); color: white; font-family: var(--win95-font); }
+
+/* Search remains Starlight's native dialog and production Pagefind index. */
+site-search dialog {
+  border: 3px solid var(--win95-surface); border-radius: 0; box-shadow: var(--win95-raised);
+  background: var(--win95-surface); color: var(--win95-ink);
+  margin: 8rem auto auto; width: min(40rem, calc(100% - 1.5rem));
+  height: fit-content; min-height: 14rem; max-height: calc(100dvh - 10rem);
+}
+site-search dialog::backdrop { background: rgb(0 0 0 / .3); -webkit-backdrop-filter: none; backdrop-filter: none; }
+site-search .dialog-frame { padding: 0 1rem 1rem; gap: .75rem; }
+site-search .dialog-frame::before {
+  content: 'Cari di Worldly Behind'; background: var(--win95-title); color: white;
+  font-size: .8125rem; font-weight: bold; padding: .35rem .5rem; margin: 0 -1rem;
+}
+site-search button[data-close-modal] { display: flex; position: static; height: auto; min-height: 2rem; align-self: flex-end; order: 2; }
+#starlight__search { --pagefind-ui-text: #111111; --pagefind-ui-primary: #000080; --pagefind-ui-background: #ffffff; --pagefind-ui-border: #808080; --pagefind-ui-border-radius: 0; --pagefind-ui-font: var(--win95-font); --sl-search-corners: 0; --sl-search-cancel-space: 0px; }
+#starlight__search .pagefind-ui__search-input { border-radius: 0; box-shadow: var(--win95-inset); background: white; font-size: 1rem; }
+#starlight__search .pagefind-ui__result { border-radius: 0; background: white; box-shadow: var(--win95-inset); }
+
+/* A single taskbar; no fake window-management controls. */
+.win95-taskbar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 15;
+  display: flex; align-items: center; gap: .5rem; height: var(--win95-taskbar-height);
+  padding: .35rem .5rem; background: var(--win95-surface); box-shadow: inset 0 1px white, inset 0 2px #dfdfdf;
+  font-size: .8125rem;
+}
+.win95-start-button, .win95-taskbar-home { display: flex; align-items: center; gap: .4rem; white-space: nowrap; }
+.win95-start-button { height: 2rem; }
+.win95-taskbar-home { font-weight: bold; }
+.win95-taskbar-divider { width: 2px; align-self: stretch; border-left: 1px solid #808080; border-right: 1px solid white; }
+.win95-taskbar-page { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.win95-taskbar-status { margin-left: auto; white-space: nowrap; box-shadow: var(--win95-inset); padding: .3rem .6rem; font-size: .75rem; }
+.win95-start-menu {
+  inset: auto auto calc(var(--win95-taskbar-height) - 1px) .5rem;
+  margin: 0; padding: 3px; border: 0; width: min(19rem, calc(100% - 1rem));
+  max-height: calc(100dvh - var(--win95-taskbar-height) - 1rem); overflow-y: auto;
+  background: var(--win95-surface); color: var(--win95-ink); box-shadow: var(--win95-raised);
+}
+.win95-start-menu:popover-open { display: flex; }
+.win95-start-brand { background: var(--win95-inactive-title); color: white; writing-mode: vertical-rl; transform: rotate(180deg); padding: .6rem; font-size: 1.1rem; }
+.win95-start-links { flex: 1; padding: .35rem; }
+.win95-start-links p { font-size: .75rem; color: var(--win95-muted); padding: .4rem .5rem; border-bottom: 1px solid #808080; margin-bottom: .3rem; }
+.win95-start-links a { display: flex; align-items: center; gap: .75rem; padding: .5rem .6rem; color: var(--win95-ink); text-decoration: none; font-size: .875rem; }
+.win95-start-links a:is(:hover, :focus-visible) { background: var(--win95-title); color: white; outline-offset: -2px; outline-color: white; }
+
+@media (min-width: 50rem) {
+  .win95-desktop .sidebar-pane { width: calc(var(--sl-sidebar-width) - .5rem); }
+}
+@media (min-width: 72rem) {
+  .win95-desktop .main-frame { padding-top: calc(var(--sl-nav-height) + var(--win95-desktop-gap) + .75rem); }
+  .win95-desktop .right-sidebar-container { width: 12rem; flex-shrink: 0; margin-left: .75rem; }
+  .win95-desktop .right-sidebar {
+    top: calc(var(--sl-nav-height) + var(--win95-desktop-gap) + .75rem);
+    height: calc(100dvh - var(--sl-nav-height) - var(--win95-taskbar-height) - 3rem);
+    width: 12rem; padding-top: .5rem; overflow-y: auto;
+  }
+  [data-has-sidebar][data-has-toc] .win95-desktop .main-pane { width: calc(100% - 12.75rem); }
+}
+@media (max-width: 49.999rem) {
+  :root, :root[data-theme='light'], :root[data-theme='dark'] { --win95-desktop-gap: 0rem; --sl-nav-height: 6rem; }
+  .win95-title-page { display: none; }
+  .win95-toolbar { padding-right: 3rem; gap: .25rem; }
+  .win95-toolbar-links { gap: .75rem; font-size: .75rem; }
+  .win95-toolbar-links a:last-child { display: none; }
+  .win95-desktop .main-frame { padding-inline: 0; padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height) + .5rem); }
+  .win95-desktop .main-pane { border-inline: 0; }
+  .win95-desktop .content-panel { padding-inline: 1.25rem; }
+  .win95-desktop .sidebar-pane { inset-block-start: var(--sl-nav-height); inset-block-end: var(--win95-taskbar-height); width: 100%; }
+  .win95-desktop .sl-menu-button { top: 2.2rem; right: .5rem; width: 2rem; height: 2rem; padding: .4rem; background: var(--win95-surface); color: var(--win95-ink); box-shadow: var(--win95-raised); }
+  .win95-taskbar-page, .win95-taskbar-status { display: none; }
+  .win95-taskbar-home { flex: 1; max-width: 15rem; }
+  site-search dialog { margin-top: 3rem; max-height: calc(100dvh - 6rem); }
+  h1 { font-size: 1.5rem; }
+}
+@media print {
+  body { background: white; }
+  .win95-taskbar, .win95-titlebar, .win95-toolbar, .win95-location { display: none; }
+  .win95-desktop .main-frame { padding: 0; }
+  .win95-desktop .main-pane { box-shadow: none; border: 0; width: 100%; }
+  .expressive-code .copy { display: none; }
+}

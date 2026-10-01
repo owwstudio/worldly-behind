@@ -1,21 +1,21 @@
 ---
 title: Framer
-description: Site building, reusable components, CMS, and publishing notes.
+description: Pembuatan website, komponen yang dapat digunakan ulang, CMS, dan catatan publikasi.
 sidebar:
-  label: Overview
+  label: Ringkasan
   order: 0
 ---
 
-Site building, reusable components, CMS, and publishing notes.
+Pembuatan website, komponen yang dapat digunakan ulang, CMS, dan catatan publikasi.
 
 ## Status
 
-**Planned content.** This category is ready for contributions; approved team
-procedures and project records have not been added yet.
+**Direncanakan.** Kategori ini siap menerima kontribusi. Prosedur tim yang
+disetujui dan catatan project belum ditambahkan.
 
-## Contribute
+## Berkontribusi
 
-Start with `templates/guide.md` in the repository root. Document prerequisites,
-steps, expected results, and troubleshooting, then verify the instructions.
+Mulai dari `templates/guide.md` di root repository. Tuliskan prasyarat, langkah kerja, hasil yang diharapkan, dan pemecahan
+masalah, lalu periksa kebenaran instruksinya.
 
-See [Getting Started](/getting-started/) for the contribution workflow.
+Lihat [Mulai di Sini](/getting-started/) untuk alur kontribusi.

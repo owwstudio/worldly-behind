@@ -1,0 +1,20 @@
+{
+  "search.label": "Cari",
+  "heading.anchorLabel": "Bagian berjudul “{{title}}”",
+  "page.draft": "Konten ini masih berupa draft dan tidak disertakan dalam build produksi.",
+  "fileTree.directory": "Folder",
+  "builtWithStarlight.label": "Dibuat dengan Starlight",
+  "expressiveCode.copyButtonTooltip": "Salin ke clipboard",
+  "expressiveCode.copyButtonCopied": "Tersalin!",
+  "expressiveCode.terminalWindowFallbackTitle": "Terminal",
+  "pagefind.clear_search": "Hapus",
+  "pagefind.load_more": "Tampilkan hasil lainnya",
+  "pagefind.search_label": "Cari di situs ini",
+  "pagefind.filters_label": "Filter",
+  "pagefind.zero_results": "Tidak ada hasil untuk [SEARCH_TERM]",
+  "pagefind.many_results": "[COUNT] hasil untuk [SEARCH_TERM]",
+  "pagefind.one_result": "[COUNT] hasil untuk [SEARCH_TERM]",
+  "pagefind.alt_search": "Tidak ada hasil untuk [SEARCH_TERM]. Menampilkan hasil untuk [DIFFERENT_TERM]",
+  "pagefind.search_suggestion": "Tidak ada hasil untuk [SEARCH_TERM]. Coba pencarian berikut:",
+  "pagefind.searching": "Mencari [SEARCH_TERM]..."
+}

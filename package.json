@@ -8,13 +8,13 @@
     "npm": ">=9.6.5"
   },
   "scripts": {
-    "dev": "astro dev --background",
+    "dev": "astro dev stop && astro sync --force && astro dev --background",
     "dev:stop": "astro dev stop",
     "dev:status": "astro dev status",
     "dev:logs": "astro dev logs",
-    "start": "astro dev --background",
+    "start": "npm run dev",
     "check": "astro check",
-    "build": "astro build",
+    "build": "astro build --force && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "pagefind": "^1.5.2",
     "typescript": "^6.0.3"
   }
 }

@@ -1,21 +1,21 @@
 ---
 title: Shopify
-description: Storefront development, themes, and store operations.
+description: Pengembangan storefront, tema, dan operasional toko.
 sidebar:
-  label: Overview
+  label: Ringkasan
   order: 0
 ---
 
-Storefront development, themes, and store operations.
+Pengembangan storefront, tema, dan operasional toko.
 
 ## Status
 
-**Planned content.** This category is ready for contributions; approved team
-procedures and project records have not been added yet.
+**Direncanakan.** Kategori ini siap menerima kontribusi. Prosedur tim yang
+disetujui dan catatan project belum ditambahkan.
 
-## Contribute
+## Berkontribusi
 
-Start with `templates/guide.md` in the repository root. Document prerequisites,
-steps, expected results, and troubleshooting, then verify the instructions.
+Mulai dari `templates/guide.md` di root repository. Tuliskan prasyarat, langkah kerja, hasil yang diharapkan, dan pemecahan
+masalah, lalu periksa kebenaran instruksinya.
 
-See [Getting Started](/getting-started/) for the contribution workflow.
+Lihat [Mulai di Sini](/getting-started/) untuk alur kontribusi.

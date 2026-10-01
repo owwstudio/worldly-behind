@@ -1,35 +1,35 @@
 ---
-title: "Case study title"
-description: "Summarize the project, problem, and key learning."
+title: "Judul studi kasus"
+description: "Ringkas project, masalah, dan pelajaran utamanya."
 draft: true
 ---
 
-<!-- Authoring template: replace all placeholders and remove draft: true before publishing. -->
+<!-- Template penulisan: ganti seluruh placeholder dan hapus draft: true sebelum publikasi. -->
 
-## Context
+## Konteks
 
-[Project, timeframe, contributors, and audience. Remove confidential details.]
+[Project, rentang waktu, kontributor, dan pembaca. Hapus informasi rahasia.]
 
-## Problem and constraints
+## Masalah dan batasan
 
-[What needed to change, why it mattered, and the constraints.]
+[Hal yang perlu diubah, alasannya, dan batasannya.]
 
-## Approach and decisions
+## Pendekatan dan keputusan
 
-[What the team did, alternatives considered, and why decisions were made.]
+[Tindakan tim, alternatif yang dipertimbangkan, dan alasan keputusan.]
 
-## Outcome and evidence
+## Hasil dan bukti
 
-[Observed results with supporting evidence. Separate measurements from estimates.]
+[Hasil yang diamati beserta bukti pendukung. Bedakan pengukuran dari perkiraan.]
 
-## Lessons learned
+## Pelajaran
 
-- [What worked and what the team would change next time.]
+- [Hal yang berhasil dan yang akan diubah tim pada kesempatan berikutnya.]
 
-## Follow-up
+## Tindak lanjut
 
-- [Action, owner, and status, when known.]
+- [Tindakan, penanggung jawab, dan status bila diketahui.]
 
-## References
+## Referensi
 
-- [Approved links to related guides, artifacts, or sources.]
+- [Tautan yang disetujui ke panduan, artefak, atau sumber terkait.]

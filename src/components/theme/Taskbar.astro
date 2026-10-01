@@ -1,0 +1,34 @@
+---
+import WindowIcon from './WindowIcon.astro';
+const { sidebar, entry } = Astro.locals.starlightRoute;
+const links = sidebar.flatMap((item) => {
+  if (item.type === 'link') return [{ label: item.label, href: item.href }];
+  // Category overviews are ordered first in the existing Starlight sidebar.
+  const first = item.entries.find((child) => child.type === 'link');
+  return first?.type === 'link' ? [{ label: item.label, href: first.href }] : [];
+});
+---
+
+<worldly-start class="win95-taskbar" role="region" aria-label="Taskbar desktop" data-pagefind-ignore>
+  <button class="win95-button win95-start-button" popovertarget="worldly-start-navigation"
+    aria-controls="worldly-start-navigation" aria-expanded="false">
+    <WindowIcon /><strong>Start</strong>
+  </button>
+  <nav id="worldly-start-navigation" popover="auto" aria-label="Navigasi Start" class="win95-start-menu">
+    <div class="win95-start-brand" aria-hidden="true">Worldly <strong>Behind</strong></div>
+    <div class="win95-start-links">
+      <p>Dokumentasi</p>
+      {links.map(({ label, href }) => <a href={href}><span class="win95-folder-icon" aria-hidden="true"></span>{label}</a>)}
+    </div>
+  </nav>
+  <div class="win95-taskbar-divider" aria-hidden="true"></div>
+  <a class="win95-taskbar-home win95-button" href={import.meta.env.BASE_URL}>
+    <WindowIcon /><span>Worldly Behind</span>
+  </a>
+  <span class="win95-taskbar-page">{entry.data.title}</span>
+  <span class="win95-taskbar-status">Dokumentasi tim</span>
+</worldly-start>
+
+<script>
+  import '../../scripts/start-menu.js';
+</script>
