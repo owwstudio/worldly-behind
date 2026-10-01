@@ -171,7 +171,7 @@ worldly-code-panels { display: block; min-width: 0; }
 .starlight-aside--caution { background: #fff7df; border-left-color: #614300; }
 .starlight-aside--danger { background: #fff0ee; border-left-color: #800000; }
 .sl-markdown-content table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-size: .875rem; }
-.sl-markdown-content :is(th, td) { border: 1px solid var(--win95-shadow); padding: .65rem .8rem; }
+.sl-markdown-content :is(th, td) { border: 1px solid var(--win95-shadow); padding: .65rem .8rem; min-width: 8rem; overflow-wrap: normal; }
 .sl-markdown-content th { background: var(--win95-surface); color: var(--win95-ink); font-weight: bold; }
 .sl-markdown-content tr:nth-child(even) { background: #f4f4f4; }
 .sl-badge { border-radius: 0; color: var(--win95-title); background: #eeeeff; border: 1px solid #808080; }
