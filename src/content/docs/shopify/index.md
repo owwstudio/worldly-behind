@@ -1,6 +1,6 @@
 ---
 title: Shopify
-description: Pengembangan storefront, tema, dan operasional toko.
+description: Dokumentasi project Shopify, termasuk Aethere, pengembangan storefront, theme, integrasi commerce, dan operasional toko.
 sidebar:
   label: Ringkasan
   order: 0
@@ -8,14 +8,15 @@ sidebar:
 
 Pengembangan storefront, tema, dan operasional toko.
 
-## Status
+## Project
 
-**Direncanakan.** Kategori ini siap menerima kontribusi. Prosedur tim yang
-disetujui dan catatan project belum ditambahkan.
+- [Aethere](/shopify/aethere/) — perjalanan project berbasis Dawn, prompt dan
+  decision log, implementasi teknis, serta maintenance dan handoff.
 
 ## Berkontribusi
 
-Mulai dari `templates/guide.md` di root repository. Tuliskan prasyarat, langkah kerja, hasil yang diharapkan, dan pemecahan
-masalah, lalu periksa kebenaran instruksinya.
+Mulai dari `templates/guide.md` di root repository. Kumpulkan dokumentasi setiap
+project dalam subfolder sendiri. Tuliskan prasyarat, langkah kerja, hasil yang
+diharapkan, dan pemecahan masalah, lalu periksa kebenaran instruksinya.
 
 Lihat [Mulai di Sini](/getting-started/) untuk alur kontribusi.
