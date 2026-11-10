@@ -1,6 +1,6 @@
 ---
 title: Pug
-description: Dokumentasi project Verity, MAKA Studio, dan Papersky, termasuk playbook, prompt, implementasi desain, motion, dan handoff.
+description: Dokumentasi project Verity, MAKA Studio, Papersky, dan Kindsight, termasuk playbook, prompt, implementasi desain, motion, dan handoff.
 sidebar:
   label: Ringkasan
   order: 0
@@ -41,6 +41,17 @@ tercatat di sumber MAKA Studio adalah HTML, CSS BEM, vanilla JavaScript, dan Vit
 
 Papersky dikelompokkan di kategori Pug sesuai struktur tim. Stack yang tercatat
 di sumber adalah React, TypeScript, SCSS BEM, dan Vite; data dashboard bersifat fiktif.
+
+## Dokumentasi Kindsight
+
+- [Kindsight](/pug/kindsight/) — website fundraising, portal organisasi, admin,
+  prompt, keputusan, implementasi, serta deployment dan handoff.
+
+**Hasil website:** [Lihat Kindsight](https://kindsight.owwteam.dev/).
+
+Kindsight berawal dari Pug dan vanilla JavaScript, kemudian bermigrasi ke React,
+Vite, dan TypeScript dengan backend Express dan MySQL. Jalur Pug legacy tetap
+menjadi referensi dalam dokumentasi.
 
 ## Berkontribusi
 
