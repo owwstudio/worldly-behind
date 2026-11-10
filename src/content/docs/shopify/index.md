@@ -1,6 +1,6 @@
 ---
 title: Shopify
-description: Dokumentasi project Shopify, termasuk Aethere dan Elevd, pengembangan storefront, theme, integrasi commerce, dan operasional toko.
+description: Dokumentasi project Shopify, termasuk Aethere, Auralink, Elevd, dan Le Friance, pengembangan storefront, theme, integrasi commerce, dan operasional toko.
 sidebar:
   label: Ringkasan
   order: 0
@@ -15,6 +15,12 @@ Pengembangan storefront, tema, dan operasional toko.
 
 - [Elevd](/shopify/elevd/) — showcase smart home berbasis Dawn, perjalanan project,
   prompt asli, preloader, scroll interaction, serta maintenance dan handoff.
+
+- [Auralink](/shopify/auralink/) — theme smart-home berbasis Skeleton, hero radio 3D,
+  motion, lifecycle section, prompt, serta handoff.
+
+- [Le Friance](/shopify/le-friance/) — theme furnitur berbasis Skeleton, katalog dan
+  commerce, motion homepage, prompt, serta handoff.
 
 ## Berkontribusi
 
