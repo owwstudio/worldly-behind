@@ -1,6 +1,6 @@
 ---
 title: Pug
-description: Dokumentasi project Verity dan MAKA Studio, termasuk playbook, prompt, implementasi desain, motion, dan handoff.
+description: Dokumentasi project Verity, MAKA Studio, dan Papersky, termasuk playbook, prompt, implementasi desain, motion, dan handoff.
 sidebar:
   label: Ringkasan
   order: 0
@@ -30,6 +30,17 @@ didokumentasikan.
 
 Dokumentasi ini dikelompokkan di kategori Pug sesuai struktur tim. Stack yang
 tercatat di sumber MAKA Studio adalah HTML, CSS BEM, vanilla JavaScript, dan Vite.
+
+## Dokumentasi Papersky
+
+- [Papersky](/pug/papersky/) — marketing landing, dashboard marketplace demo,
+  prompt, keputusan, implementasi, serta deployment dan handoff.
+
+**Hasil website:** [Lihat Papersky](https://papersky.owwteam.dev) dan
+[demo dashboard](https://papersky.owwteam.dev/app/overview).
+
+Papersky dikelompokkan di kategori Pug sesuai struktur tim. Stack yang tercatat
+di sumber adalah React, TypeScript, SCSS BEM, dan Vite; data dashboard bersifat fiktif.
 
 ## Berkontribusi
 
