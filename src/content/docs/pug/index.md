@@ -1,6 +1,6 @@
 ---
 title: Pug
-description: Dokumentasi Pug dari Verity, termasuk project playbook, template prompt, dan template AGENTS.md.
+description: Dokumentasi project Verity dan MAKA Studio, termasuk playbook, prompt, implementasi desain, motion, dan handoff.
 sidebar:
   label: Ringkasan
   order: 0
@@ -22,6 +22,14 @@ didokumentasikan.
   dapat disalin untuk kickoff, implementasi section, revisi, QA, dan handoff.
 - [Verity: AGENTS.md Template](/pug/verity/agents-template/) — template aturan
   pengembangan untuk digunakan pada project Pug baru.
+
+## Dokumentasi MAKA Studio
+
+- [MAKA Studio](/pug/maka-studio/) — ringkasan project, perjalanan implementasi,
+  katalog prompt, keputusan, motion, validasi, dan handoff.
+
+Dokumentasi ini dikelompokkan di kategori Pug sesuai struktur tim. Stack yang
+tercatat di sumber MAKA Studio adalah HTML, CSS BEM, vanilla JavaScript, dan Vite.
 
 ## Berkontribusi
 
