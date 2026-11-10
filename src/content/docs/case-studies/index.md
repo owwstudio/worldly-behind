@@ -8,10 +8,10 @@ sidebar:
 
 Konteks project, keputusan, hasil, dan pelajaran yang diperoleh.
 
-## Status
+## Project
 
-**Direncanakan.** Kategori ini siap menerima kontribusi. Prosedur tim yang
-disetujui dan catatan project belum ditambahkan.
+- [internal-app](/case-studies/internal-app/) — aplikasi internal perusahaan,
+  keputusan arsitektur, kendala pengembangan, serta maintenance dan handoff.
 
 ## Berkontribusi
 
