@@ -1,6 +1,6 @@
 ---
 title: Shopify
-description: Dokumentasi project Shopify, termasuk Aethere, pengembangan storefront, theme, integrasi commerce, dan operasional toko.
+description: Dokumentasi project Shopify, termasuk Aethere dan Elevd, pengembangan storefront, theme, integrasi commerce, dan operasional toko.
 sidebar:
   label: Ringkasan
   order: 0
@@ -12,6 +12,9 @@ Pengembangan storefront, tema, dan operasional toko.
 
 - [Aethere](/shopify/aethere/) — perjalanan project berbasis Dawn, prompt dan
   decision log, implementasi teknis, serta maintenance dan handoff.
+
+- [Elevd](/shopify/elevd/) — showcase smart home berbasis Dawn, perjalanan project,
+  prompt asli, preloader, scroll interaction, serta maintenance dan handoff.
 
 ## Berkontribusi
 
