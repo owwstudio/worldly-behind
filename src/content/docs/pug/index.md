@@ -1,6 +1,6 @@
 ---
 title: Pug
-description: Dokumentasi project Verity, MAKA Studio, Papersky, dan Kindsight, termasuk playbook, prompt, implementasi desain, motion, dan handoff.
+description: Dokumentasi project Verity, MAKA Studio, Papersky, Kindsight, dan Finora, termasuk playbook, prompt, implementasi desain, motion, dan handoff.
 sidebar:
   label: Ringkasan
   order: 0
@@ -52,6 +52,18 @@ di sumber adalah React, TypeScript, SCSS BEM, dan Vite; data dashboard bersifat 
 Kindsight berawal dari Pug dan vanilla JavaScript, kemudian bermigrasi ke React,
 Vite, dan TypeScript dengan backend Express dan MySQL. Jalur Pug legacy tetap
 menjadi referensi dalam dokumentasi.
+
+## Dokumentasi Finora
+
+- [Finora](/pug/finora/) — showcase dashboard keuangan personal, landing,
+  prompt, keputusan, implementasi, API Gemini, serta deployment dan handoff.
+
+**Hasil website:** [Lihat Finora](https://finora.owwteam.dev/) dan
+[Messages](https://finora.owwteam.dev/app/messages).
+
+Finora dikelompokkan di kategori Pug sesuai struktur tim. Stack yang tercatat
+di sumber adalah React, Vite, TypeScript, SCSS BEM, dan Express. Ledger/Goals
+masih berupa demo; MySQL belum diintegrasikan pada rilis yang didokumentasikan.
 
 ## Berkontribusi
 
